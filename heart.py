@@ -8,9 +8,8 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
-# -----------------------------
+
 # Your heart-curve code
-# -----------------------------
 def heart_curve(x, a):
     """
     Your custom heart function:
@@ -54,9 +53,8 @@ def create_heart_figure():
 
     return fig, line, ani
 
-# -----------------------------
+
 # Popup window for the question
-# -----------------------------
 class ValentinePopup(tk.Toplevel):
     def __init__(self, parent):
         super().__init__(parent)
@@ -106,9 +104,7 @@ class ValentinePopup(tk.Toplevel):
             messagebox.showinfo("Oh...", self.final_message)
             self.destroy()
 
-# -----------------------------
 # Main application (Tk)
-# -----------------------------
 class ValentineApp(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -133,9 +129,8 @@ class ValentineApp(tk.Tk):
         """Create the popup window asking for Valentine acceptance."""
         ValentinePopup(self)
 
-# -----------------------------
-# Run the app
-# -----------------------------
+
+# Run the app in python main
 if __name__ == "__main__":
     app = ValentineApp()
     app.mainloop()
